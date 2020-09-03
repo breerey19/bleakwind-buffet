@@ -1,30 +1,28 @@
 ﻿using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 /*
  * Author: Bree Reynoso
- * Class name: CandlehearthCoffee.cs
- * Purpose: Sets properties of prices, calories, size, caffination, and special instructions for Candlehearth Coffee.
+ * Class name: SailorsSoda.cs
+ * Purpose: Sets properties of prices, calories, size, flavor, and special instructions for Sailor's Soda.
  * Also includes a ToString override.
  */
 
-namespace Data.Drink
+namespace BleakwindBuffet.Data.Drinks
 {
-    public class CandlehearthCoffee
+    public class SailorSoda
     {
         /// <summary>
-        /// Sets defaults for size, ice, cream, and decaf
+        /// Sets defaults for size, ice, and soda flavor
         /// </summary>
         private Size size = Size.Small;
-        private bool ice = false;
-        private bool roomForCream = false;
-        private bool decaf = false;
+        private bool ice = true;
+        private SodaFlavor sodaFlavor = SodaFlavor.Cherry;
 
         /// <summary>
-        /// Sets size of Candlehearth Coffee, default small
+        /// Sets size of Sailor's Soda, default small
         /// </summary>
         public Size Size
         {
@@ -39,49 +37,35 @@ namespace Data.Drink
         }
 
         /// <summary>
-        /// Sets price of Candlehearth Coffee
+        /// Sets price of Sailor's Soda
         /// </summary>
         public double Price
         {
             get
             {
-                if (Size == Size.Small) return 0.75;
-                if (Size == Size.Medium) return 1.25;
-                if (Size == Size.Large) return 1.75;
+                if (Size == Size.Small) return 1.42;
+                if (Size == Size.Medium) return 1.74;
+                if (Size == Size.Large) return 2.07;
                 throw new NotImplementedException($"Unknown size of {Size}");
             }
         }
 
         /// <summary>
-        /// Sets calories of Candlehearth Coffee
+        /// Sets calories of Sailor's Soda
         /// </summary>
         public uint Calories
         {
             get
             {
-                if (Size == Size.Small) return 7;
-                if (Size == Size.Medium) return 10;
-                if (Size == Size.Large) return 20;
+                if (Size == Size.Small) return 117;
+                if (Size == Size.Medium) return 153;
+                if (Size == Size.Large) return 205;
                 throw new NotImplementedException($"Unknown size of {Size}");
             }
         }
 
         /// <summary>
-        /// Sets value of decaf, default is false
-        /// </summary>
-        public bool Decaf
-        {
-            get
-            {
-                return decaf;
-            }
-            set
-            {
-               decaf = value;
-            }
-        }
-        /// <summary>
-        /// Sets value of ice, default is false
+        /// Sets value of ice, default is true
         /// </summary>
         public bool Ice
         {
@@ -96,19 +80,20 @@ namespace Data.Drink
         }
 
         /// <summary>
-        /// Sets value of cream, default is false
+        /// Sets soda flavor value, default is cherry
         /// </summary>
-        public bool RoomForCream
+        public SodaFlavor SodaFlavor
         {
             get
             {
-                return roomForCream;
+                return sodaFlavor;
             }
             set
             {
-                roomForCream = value;
+                sodaFlavor = value;
             }
         }
+
         /// <summary>
         /// Adds string elements to a new List and returns with special instructions, 
         /// otherwise returns an empty list
@@ -118,30 +103,20 @@ namespace Data.Drink
             get
             {
                 List<string> specialInstructions = new List<string>();
-                if (Ice == true) specialInstructions.Add("Add ice");
-                if (RoomForCream == true) specialInstructions.Add("Add cream");
+                if (!Ice) specialInstructions.Add("Hold ice");
                 return specialInstructions;
             }
 
         }
 
         /// <summary>
-        /// returns the size and drink name in a string
+        /// returns the size, flavor, and drink name in a string
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            if(Decaf == true)
-            {
-                string details = $"{Size} Decaf Candlehearth Coffee";
-                return details;
-            }
-            else
-            {
-                string details = $"{Size} Candlehearth Coffee";
-                return details;
-            }
-
+            string details = $"{Size} {SodaFlavor} Sailor Soda";
+            return details;
         }
     }
 }

@@ -4,24 +4,24 @@ using System.Text;
 
 /*
  * Author: Bree Reynoso
- * Class name: ThalmorTriple.cs
- * Purpose: Sets properties of prices, calories, and special instructions for the Thalmor Triple.
+ * Class name: DoubleDraugr.cs
+ * Purpose: Sets properties of prices, calories, and special instructions for the Double Draugr.
  * Also includes a ToString override.
  */
 
-namespace Data.Entree
+namespace BleakwindBuffet.Data.Entrees
 {
-    public class ThalmorTriple
+    public class DoubleDraugr
     {
         /// <summary>
-        /// Sets price of Thalmor Triple
+        /// Sets price of Double Draugr
         /// </summary>
-        public double Price => 8.32;
+        public double Price => 7.32;
 
         /// <summary>
-        /// Sets calories of Thalmor Triple
+        /// Sets calories of Double Draugr
         /// </summary>
-        public uint Calories => 943;
+        public uint Calories => 843;
 
         /// <summary>
         /// Sets ingredient values to true as default
@@ -34,9 +34,6 @@ namespace Data.Entree
         private bool tomato = true;
         private bool lettuce = true;
         private bool mayo = true;
-        private bool bacon = true;
-        private bool egg = true;
-
 
         /// <summary>
         /// Sets value of bun, default is true
@@ -111,24 +108,6 @@ namespace Data.Entree
         }
 
         /// <summary>
-        /// Sets value of bacon, default is true
-        /// </summary>
-        public bool Bacon
-        {
-            get { return bacon; }
-            set { bacon = value; }
-        }
-
-        /// <summary>
-        /// Sets value of egg, default is true
-        /// </summary>
-        public bool Egg
-        {
-            get { return egg; }
-            set { egg = value; }
-        }
-
-        /// <summary>
         /// Adds string elementsto a new List and returns with special instructions, 
         /// otherwise returns an empty list
         /// </summary>
@@ -145,8 +124,6 @@ namespace Data.Entree
                 if (!Tomato) specialInstructions.Add("Hold tomato");
                 if (!Lettuce) specialInstructions.Add("Hold lettuce");
                 if (!Mayo) specialInstructions.Add("Hold mayo");
-                if (!Bacon) specialInstructions.Add("Hold bacon");
-                if (!Egg) specialInstructions.Add("Hold egg");
                 return specialInstructions;
             }
 
@@ -158,7 +135,7 @@ namespace Data.Entree
         /// <returns></returns>
         public override string ToString()
         {
-            return "Thalmor Triple";
+            return "Double Draugr";
         }
     }
 }

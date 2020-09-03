@@ -1,5 +1,4 @@
 ﻿using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,7 +9,7 @@ using System.Text;
  * Purpose: Sets properties of prices, calories, size, and ToString override for Dragonborn Waffle Fries.
  */
 
-namespace Data.Side
+namespace BleakwindBuffet.Data.Sides
 {
     public class DragonbornWaffleFries
     {

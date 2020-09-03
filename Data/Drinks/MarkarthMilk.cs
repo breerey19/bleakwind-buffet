@@ -1,5 +1,4 @@
 ﻿using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +10,7 @@ using System.Text;
  * Also includes a ToString override.
  */
 
-namespace Data.Drink
+namespace BleakwindBuffet.Data.Drinks
 {
     public class MarkarthMilk
     {

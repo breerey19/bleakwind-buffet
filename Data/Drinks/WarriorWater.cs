@@ -1,29 +1,28 @@
 ﻿using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 /*
  * Author: Bree Reynoso
- * Class name: SailorsSoda.cs
- * Purpose: Sets properties of prices, calories, size, flavor, and special instructions for Sailor's Soda.
+ * Class name: WarriorWater.cs
+ * Purpose: Sets properties of prices, calories, size, and special instructions for Warrior Water.
  * Also includes a ToString override.
  */
 
-namespace Data.Drink
+namespace BleakwindBuffet.Data.Drinks
 {
-    public class SailorSoda
+    public class WarriorWater
     {
         /// <summary>
-        /// Sets defaults for size, ice, and soda flavor
+        /// Sets defaults for size, ice, and lemon
         /// </summary>
         private Size size = Size.Small;
         private bool ice = true;
-        private SodaFlavor sodaFlavor = SodaFlavor.Cherry;
+        private bool lemon = false;
 
         /// <summary>
-        /// Sets size of Sailor's Soda, default small
+        /// Sets size of Warrior Water, default small
         /// </summary>
         public Size Size
         {
@@ -38,32 +37,14 @@ namespace Data.Drink
         }
 
         /// <summary>
-        /// Sets price of Sailor's Soda
+        /// Sets price of Warrior Water to 0.00 for all sizes
         /// </summary>
-        public double Price
-        {
-            get
-            {
-                if (Size == Size.Small) return 1.42;
-                if (Size == Size.Medium) return 1.74;
-                if (Size == Size.Large) return 2.07;
-                throw new NotImplementedException($"Unknown size of {Size}");
-            }
-        }
+        public double Price => 0.00;
 
         /// <summary>
-        /// Sets calories of Sailor's Soda
+        /// Sets calories of Warrior Water to 0 for all sizes
         /// </summary>
-        public uint Calories
-        {
-            get
-            {
-                if (Size == Size.Small) return 117;
-                if (Size == Size.Medium) return 153;
-                if (Size == Size.Large) return 205;
-                throw new NotImplementedException($"Unknown size of {Size}");
-            }
-        }
+        public uint Calories => 0;
 
         /// <summary>
         /// Sets value of ice, default is true
@@ -81,17 +62,17 @@ namespace Data.Drink
         }
 
         /// <summary>
-        /// Sets soda flavor value, default is cherry
+        /// Sets value of lemon, default is false
         /// </summary>
-        public SodaFlavor SodaFlavor
+        public bool Lemon
         {
             get
             {
-                return sodaFlavor;
+                return lemon;
             }
             set
             {
-                sodaFlavor = value;
+                lemon = value;
             }
         }
 
@@ -105,18 +86,19 @@ namespace Data.Drink
             {
                 List<string> specialInstructions = new List<string>();
                 if (!Ice) specialInstructions.Add("Hold ice");
+                if (Lemon == true) specialInstructions.Add("Add lemon");
                 return specialInstructions;
             }
 
         }
 
         /// <summary>
-        /// returns the size, flavor, and drink name in a string
+        /// returns the size and drink name in a string
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            string details = $"{Size} {SodaFlavor} Sailor Soda";
+            string details = $"{Size} Warrior Water";
             return details;
         }
     }

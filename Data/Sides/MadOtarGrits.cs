@@ -1,19 +1,17 @@
 ﻿using BleakwindBuffet.Data.Enums;
-using Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 /*
  * Author: Bree Reynoso
- * Class name: VokunSalad.cs
- * Purpose: Sets properties of prices, calories, size, and ToString override for Vokun Salad.
+ * Class name: MadOtarGrits.cs
+ * Purpose: Sets properties of prices, calories, size, and ToString override for MadOtarGrits.
  */
 
-
-namespace Data.Side
+namespace BleakwindBuffet.Data.Sides
 {
-    public class VokunSalad
+    public class MadOtarGrits
     {
         /// <summary>
         /// Sets defaults for size
@@ -21,7 +19,7 @@ namespace Data.Side
         private Size size = Size.Small;
 
         /// <summary>
-        /// Sets size of Vokun Salad, default small
+        /// Sets size of Mad Otar Grits, default small
         /// </summary>
         public Size Size
         {
@@ -36,45 +34,41 @@ namespace Data.Side
         }
 
         /// <summary>
-        /// Sets price of Vokun Salad
+        /// Sets price of Mad Otar Grits
         /// </summary>
         public double Price
         {
             get
             {
-                if (Size == Size.Small) return 0.93;
-                if (Size == Size.Medium) return 1.28;
-                if (Size == Size.Large) return 1.82;
+                if (Size == Size.Small) return 1.22;
+                if (Size == Size.Medium) return 1.58;
+                if (Size == Size.Large) return 1.93;
                 throw new NotImplementedException($"Unknown size of {Size}");
             }
         }
 
         /// <summary>
-        /// Sets calories of Vokun Salad
+        /// Sets calories of Mad Otar Grits
         /// </summary>
         public uint Calories
         {
             get
             {
-                if (Size == Size.Small) return 41;
-                if (Size == Size.Medium) return 52;
-                if (Size == Size.Large) return 73;
+                if (Size == Size.Small) return 105;
+                if (Size == Size.Medium) return 142;
+                if (Size == Size.Large) return 179;
                 throw new NotImplementedException($"Unknown size of {Size}");
             }
         }
 
         /// <summary>
-        /// returns the size and string name
+        /// returns the size aand string name
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            if (Size == Size.Large) return "Large Vokun Salad";
-            if(Size == Size.Medium) return "Medium Vokun Salad";
-            if(Size == Size.Small) return "Small Vokun Salad";
-            throw new NotImplementedException($"Unknown size of {Size}");
+            string details = $"{Size} Mad Otar Grits";
+            return details;
         }
-
-
     }
 }

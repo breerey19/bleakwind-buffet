@@ -11,7 +11,7 @@ using System.Text;
  * Also includes a ToString override.
  */
 
-namespace Data.Entree
+namespace BleakwindBuffet.Data.Entrees
 {
     public class BriarheartBurger
     {
