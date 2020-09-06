@@ -25,36 +25,59 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public uint Calories => 734;
 
-        //private bool bun = true;
-        //private bool ketchup = true;
-        //private bool mustard = true;
-        //private bool pickle = true;
-        //private bool cheese = true;
+        /// <summary>
+        /// Sets ingredient values to true as default
+        /// </summary>
+        private bool bun = true;
+        private bool ketchup = true;
+        private bool mustard = true;
+        private bool pickle = true;
+        private bool cheese = true;
 
         /// <summary>
         /// Sets value of bun, default is true
         /// </summary>
-        public bool Bun { get; set; } = true;
+        public bool Bun
+        {
+            get { return bun; }
+            set { bun = value; }
+        }
 
         /// <summary>
         /// Sets value of ketchup, default is true
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup
+        {
+            get { return ketchup; }
+            set { ketchup = value; }
+        }
 
         /// <summary>
         /// Sets value of mustard, default is true
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public bool Mustard
+        {
+            get { return mustard; }
+            set { mustard = value; }
+        }
 
         /// <summary>
         /// Sets value of pickle, default is true
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle
+        {
+            get { return pickle; }
+            set { pickle = value; }
+        }
 
         /// <summary>
         /// Sets value of cheese, default is true
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public bool Cheese
+        {
+            get { return cheese; }
+            set { cheese = value; }
+        }
 
         /// <summary>
         /// Adds string elementsto a new List and returns with special instructions, 
@@ -78,7 +101,9 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// returns the string of the menu item
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// The string of the entree
+        /// </returns>
         public override string ToString()
         {
             return "Briarheart Burger";

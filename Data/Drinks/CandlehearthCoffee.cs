@@ -40,6 +40,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Sets price of Candlehearth Coffee
         /// </summary>
+        /// <exception cref="NotImplementedException">
+        /// Thrown if the price for the size is unknown
+        /// </exception>
         public double Price
         {
             get
@@ -54,6 +57,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Sets calories of Candlehearth Coffee
         /// </summary>
+        /// <exception cref="NotImplementedException">
+        /// Thrown if the calories for the size is unknown
+        /// </exception>
         public uint Calories
         {
             get
@@ -127,7 +133,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// returns the size and drink name in a string
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// The string describing the Candlehearth Coffee
+        /// </returns>
         public override string ToString()
         {
             if(Decaf == true)

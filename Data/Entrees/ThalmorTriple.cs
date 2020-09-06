@@ -155,7 +155,9 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// returns the string of the menu item
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// The string of the entree
+        /// </returns>
         public override string ToString()
         {
             return "Thalmor Triple";

@@ -36,6 +36,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Sets price of Mad Otar Grits
         /// </summary>
+        /// <exception cref="NotImplementedException">
+        /// Thrown if the price for the size is unknown
+        /// </exception>
         public double Price
         {
             get
@@ -50,6 +53,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Sets calories of Mad Otar Grits
         /// </summary>
+        /// <exception cref="NotImplementedException">
+        /// Thrown if the calories for the size is unknown
+        /// </exception>
         public uint Calories
         {
             get
@@ -62,9 +68,24 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
+        /// No instructions, empty list should be returned always
+        /// </summary>
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                List<string> specialInstructions = new List<string>();
+                return specialInstructions;
+            }
+
+        }
+
+        /// <summary>
         /// returns the size aand string name
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// The string describing the side
+        /// </returns>
         public override string ToString()
         {
             string details = $"{Size} Mad Otar Grits";

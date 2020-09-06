@@ -36,6 +36,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Sets price of Vokun Salad
         /// </summary>
+        /// <exception cref="NotImplementedException">
+        /// Thrown if the price for the size is unknown
+        /// </exception>
         public double Price
         {
             get
@@ -50,6 +53,9 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Sets calories of Vokun Salad
         /// </summary>
+        /// <exception cref="NotImplementedException">
+        /// Thrown if the calories for the size is unknown
+        /// </exception>
         public uint Calories
         {
             get
@@ -62,15 +68,28 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
+        /// No instructions, empty list should be returned always
+        /// </summary>
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                List<string> specialInstructions = new List<string>();
+                return specialInstructions;
+            }
+
+        }
+
+        /// <summary>
         /// returns the size and string name
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// The string describing the side
+        /// </returns>
         public override string ToString()
         {
-            if (Size == Size.Large) return "Large Vokun Salad";
-            if(Size == Size.Medium) return "Medium Vokun Salad";
-            if(Size == Size.Small) return "Small Vokun Salad";
-            throw new NotImplementedException($"Unknown size of {Size}");
+            string details = $"{Size} Vokun Salad";
+            return details;
         }
 
 

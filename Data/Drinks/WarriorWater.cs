@@ -95,7 +95,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// returns the size and drink name in a string
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// The string describing the Warrior Water
+        /// </returns>
         public override string ToString()
         {
             string details = $"{Size} Warrior Water";
