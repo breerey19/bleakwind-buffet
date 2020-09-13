@@ -11,17 +11,17 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class GardenOrcOmelette
+    public class GardenOrcOmelette : Entree
     {
         /// <summary>
         /// Sets price of Garden Orc Omelette
         /// </summary>
-        public double Price => 4.57;
+        public override double Price => 4.57;
 
         /// <summary>
         /// Sets calories of Garden Orc Omelette
         /// </summary>
-        public uint Calories => 404;
+        public override uint Calories => 404;
 
         /// <summary>
         /// Sets ingredient values to true as default
@@ -71,7 +71,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Adds string elementsto a new List and returns with special instructions, 
         /// otherwise returns an empty list
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

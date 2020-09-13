@@ -12,29 +12,13 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
         /// <summary>
         /// Sets defaults for size, ice, and soda flavor
         /// </summary>
-        private Size size = Size.Small;
         private bool ice = true;
         private SodaFlavor sodaFlavor = SodaFlavor.Cherry;
-
-        /// <summary>
-        /// Sets size of Sailor's Soda, default small
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
 
         /// <summary>
         /// Sets price of Sailor's Soda
@@ -42,14 +26,18 @@ namespace BleakwindBuffet.Data.Drinks
         /// <exception cref="NotImplementedException">
         /// Thrown if the price for the size is unknown
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (Size == Size.Small) return 1.42;
-                if (Size == Size.Medium) return 1.74;
-                if (Size == Size.Large) return 2.07;
-                throw new NotImplementedException($"Unknown size of {Size}");
+                switch (Size)
+                {
+                    case Size.Small: return 1.42;
+                    case Size.Medium: return 1.74;
+                    case Size.Large: return 2.07;
+                    default: throw new NotImplementedException($"Unknown size of {Size}");
+                }
+                
             }
         }
 
@@ -59,14 +47,18 @@ namespace BleakwindBuffet.Data.Drinks
         /// <exception cref="NotImplementedException">
         /// Thrown if the calories for the size is unknown
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (Size == Size.Small) return 117;
-                if (Size == Size.Medium) return 153;
-                if (Size == Size.Large) return 205;
-                throw new NotImplementedException($"Unknown size of {Size}");
+                switch (Size)
+                {
+                    case Size.Small: return 117;
+                    case Size.Medium: return 153;
+                    case Size.Large: return 205;
+                    default: throw new NotImplementedException($"Unknown size of {Size}");
+                }
+                
             }
         }
 
@@ -104,7 +96,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Adds string elements to a new List and returns with special instructions, 
         /// otherwise returns an empty list
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

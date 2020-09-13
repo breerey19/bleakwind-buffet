@@ -12,39 +12,23 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class WarriorWater
+    public class WarriorWater : Drink
     {
         /// <summary>
         /// Sets defaults for size, ice, and lemon
         /// </summary>
-        private Size size = Size.Small;
         private bool ice = true;
         private bool lemon = false;
 
         /// <summary>
-        /// Sets size of Warrior Water, default small
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-
-        /// <summary>
         /// Sets price of Warrior Water to 0.00 for all sizes
         /// </summary>
-        public double Price => 0.00;
+        public override double Price => 0.00;
 
         /// <summary>
         /// Sets calories of Warrior Water to 0 for all sizes
         /// </summary>
-        public uint Calories => 0;
+        public override uint Calories => 0;
 
         /// <summary>
         /// Sets value of ice, default is true
@@ -80,7 +64,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Adds string elements to a new List and returns with special instructions, 
         /// otherwise returns an empty list
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

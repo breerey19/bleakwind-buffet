@@ -11,27 +11,11 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class DragonbornWaffleFries
+    public class DragonbornWaffleFries : Side
     {
         /// <summary>
         /// Sets defaults for size
         /// </summary>
-        private Size size = Size.Small;
-
-        /// <summary>
-        /// Sets size of Dragonborn Waffle Fries, default small
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
 
         /// <summary>
         /// Sets price of Dragonborn Waffle Fries
@@ -39,14 +23,18 @@ namespace BleakwindBuffet.Data.Sides
         /// <exception cref="NotImplementedException">
         /// Thrown if the price for the size is unknown
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (Size == Size.Small) return 0.42;
-                if (Size == Size.Medium) return 0.76;
-                if (Size == Size.Large) return 0.96;
-                throw new NotImplementedException($"Unknown size of {Size}");
+                switch (Size)
+                {
+                    case Size.Small: return 0.42;
+                    case Size.Medium: return 0.76;
+                    case Size.Large: return 0.96;
+                    default: throw new NotImplementedException($"Unknown size of {Size}");
+                }
+                
             }
         }
 
@@ -56,21 +44,25 @@ namespace BleakwindBuffet.Data.Sides
         /// <exception cref="NotImplementedException">
         /// Thrown if the calories for the size is unknown
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (Size == Size.Small) return 77;
-                if (Size == Size.Medium) return 89;
-                if (Size == Size.Large) return 100;
-                throw new NotImplementedException($"Unknown size of {Size}");
+                switch (Size)
+                {
+                    case Size.Small: return 77;
+                    case Size.Medium: return 89;
+                    case Size.Large: return 100;
+                    default: throw new NotImplementedException($"Unknown size of {Size}");
+            }
+               
             }
         }
 
         /// <summary>
         /// No instructions, empty list should be returned always
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -12,28 +12,12 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink
     {
         /// <summary>
         /// Sets defaults for size and ice
         /// </summary>
-        private Size size = Size.Small;
         private bool ice = false;
-
-        /// <summary>
-        /// Sets size of Aretino Apple Juice, default small
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
 
         /// <summary>
         /// Sets price of Aretino Apple Juice
@@ -41,14 +25,18 @@ namespace BleakwindBuffet.Data.Drinks
         /// <exception cref="NotImplementedException">
         /// Thrown if the price for the size is unknown
         /// </exception>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (Size == Size.Small) return 0.62;
-                if (Size == Size.Medium) return 0.87;
-                if (Size == Size.Large) return 1.01;
-                throw new NotImplementedException($"Unknown size of {Size}");
+                switch (Size)
+                {
+                    case Size.Small: return 0.62;
+                    case Size.Medium: return 0.87;
+                    case Size.Large: return 1.01;
+                    default: throw new NotImplementedException($"Unknown size of {Size}");
+            }
+
             }
         }
 
@@ -58,14 +46,18 @@ namespace BleakwindBuffet.Data.Drinks
         /// <exception cref="NotImplementedException">
         /// Thrown if the calories for the size is unknown
         /// </exception>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (Size == Size.Small) return 44;
-                if (Size == Size.Medium) return 88;
-                if (Size == Size.Large) return 132;
-                throw new NotImplementedException($"Unknown size of {Size}");
+                switch (Size)
+                {
+                    case Size.Small: return 44;
+                    case Size.Medium: return 88;
+                    case Size.Large: return 132;
+                    default: throw new NotImplementedException($"Unknown size of {Size}");
+                }
+                
             }
         }
 
@@ -88,7 +80,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Adds string elements to a new List and returns with special instructions, 
         /// otherwise returns an empty list
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -107,8 +99,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// </returns>
         public override string ToString()
         {
-            string details = $"{Size} Aretino Apple Juice";
-            return details;
+            return Size.ToString() + " Aretino Apple Juice";
         }
     }
 }

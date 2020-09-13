@@ -13,7 +13,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class BriarheartBurgerTests
     {
-        
+        [Fact]
+        public void ShouldBeAnEntree()
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+            Assert.IsAssignableFrom<Entree>(bb);
+        }
+
         [Fact]
         public void ShouldIncludeBunByDefault()
         {

@@ -11,17 +11,17 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class SmokehouseSkeleton
+    public class SmokehouseSkeleton : Entree
     {
         /// <summary>
         /// Sets price of Smokehouse Skeleton
         /// </summary>
-        public double Price => 5.62;
+        public override double Price => 5.62;
 
         /// <summary>
         /// Sets calories of Smokehouse Skeleton
         /// </summary>
-        public uint Calories => 602;
+        public override uint Calories => 602;
 
         /// <summary>
         /// Sets ingredient values to true as default
@@ -71,7 +71,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Adds string elementsto a new List and returns with special instructions, 
         /// otherwise returns an empty list
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

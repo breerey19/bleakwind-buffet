@@ -11,17 +11,17 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class ThalmorTriple
+    public class ThalmorTriple : Entree
     {
         /// <summary>
         /// Sets price of Thalmor Triple
         /// </summary>
-        public double Price => 8.32;
+        public override double Price => 8.32;
 
         /// <summary>
         /// Sets calories of Thalmor Triple
         /// </summary>
-        public uint Calories => 943;
+        public override uint Calories => 943;
 
         /// <summary>
         /// Sets ingredient values to true as default
@@ -132,7 +132,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Adds string elementsto a new List and returns with special instructions, 
         /// otherwise returns an empty list
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
