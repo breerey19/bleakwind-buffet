@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public abstract class Side
+    public abstract class Side : IOrderItem
     {
         /// <summary>
         /// The size of the side

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data;
 
 /*
  * Author: Bree Reynoso
@@ -13,7 +14,6 @@ namespace BleakwindBuffet.Data.Sides
 {
     public class FriedMiraak : Side
     {
-
         /// <summary>
         /// Sets price of Fried Miraak
         /// </summary>

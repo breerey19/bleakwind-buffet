@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Text;
+using BleakwindBuffet.Data;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// A base class representing the common properties of drinks
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IOrderItem
     {
         /// <summary>
         /// The size of the drink
