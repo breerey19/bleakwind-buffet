@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="PointOfSale.MenuSections"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="432" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="42"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" FontStyle="Normal" FontSize="17" TextAlignment="Center" FontWeight="SemiBold" Margin="0,2,0,0">
+            Entrees
+        </TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" FontStyle="Normal" FontSize="17" TextAlignment="Center" FontWeight="SemiBold" Margin="0,2,0,0">
+            Drinks
+        </TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="2" FontStyle="Normal" FontSize="17" TextAlignment="Center" FontWeight="SemiBold" Margin="0,2,0,0">
+            Sides
+        </TextBlock>
+
+        <Border Name="menuItemBorder" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="7" BorderThickness="3" BorderBrush="Black" Margin="6,0,6,0"/>
+        <Button Grid.Row="2" Click="BriarheartBurgerClicked" Name="BriarheartBurgerButton" Margin="12,6,4,3" DataContext="BriarheartBurger.cs">
+            Briarheart Burger
+        </Button>
+        <Button Grid.Row="3" Click="DoubleDraugrClicked" Name="DoubleDraugrButton" Margin="12,3,4,3">
+            Double Draugr
+        </Button>
+        <Button Grid.Row="4" Click="ThalmorTripleClicked" Name="ThalmorTripleButton" Margin="12,3,4,3">
+            Thalmor Triple
+        </Button>
+        <Button Grid.Row="5" Name="ThugsTBoneButton" Margin="12,3,4,3">
+            Thugs T-Bone
+        </Button>
+        <Button Grid.Row="6" Click="PhillyPoacherClicked" Name="PhillyPoacherButton" Margin="12,3,4,3">
+            Philly Poacher
+        </Button>
+        <Button Grid.Row="7" Click="GardenOrcOmeletteClicked" Name="GardenOrcOmeletteButton" Margin="12,3,4,3">
+            Garden Orc Omelette
+        </Button>
+        <Button Grid.Row="8" Click="SmokehouseSkeletonClicked" Name="SmokehouseSkeletonButton" Margin="12,3,4,6">
+            Smokehouse Skeleton
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="1" Click="WarriorWaterClicked" Name="WarriorWaterButton" Margin="2,6,4,3">
+            Warrior Water
+        </Button>
+        <Button Grid.Row="3" Grid.Column="1" Click="SailorSodaClicked" Name="SailorSodaButton" Margin="2,3,4,3">
+            Sailor Soda
+        </Button>
+        <Button Grid.Row="4" Grid.Column="1" Click="AretinoAppleJuiceClicked" Name="AretinoAppleJuiceButton" Margin="2,3,4,3">
+            Aretino Apple Juice
+        </Button>
+        <Button Grid.Row="5" Grid.Column="1" Click="MarkarthMilkClicked" Name="MarkarthMilkButton" Margin="2,3,4,3">
+            Markarth Milk
+        </Button>
+        <Button Grid.Row="6" Grid.Column="1" Click="CandlehearthCoffeeClicked" Name="CandlehearthCoffeeButton" Margin="2,3,4,3">
+            Candlehearth Coffee
+        </Button>
+
+        <Button Grid.Row="2" Grid.Column="2" Click="DragonbornWaffleFriesClicked" Name="DragonbornWaffleFriesButton" Margin="2,6,12,3">
+            Dragonborn Waffle Fries
+        </Button>
+        <Button Grid.Row="3" Grid.Column="2" Click="FriedMiraakClicked" Name="FriedMiraakButton" Margin="2,3,12,3">
+            Fried Miraak
+        </Button>
+        <Button Grid.Row="4" Grid.Column="2" Click="MadOtarGritsClicked" Name="MadOtarGritsButton" Margin="2,3,12,3">
+            Mad Otar Grits
+        </Button>
+        <Button Grid.Row="5" Grid.Column="2" Click="VokunSaladClicked" Name="VokunSaladButton" Margin="2,3,12,3">
+            Vokun Salad
+        </Button>
+    </Grid>
+</UserControl>

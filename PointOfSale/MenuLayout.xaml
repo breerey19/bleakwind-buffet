@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="PointOfSale.MenuLayout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="432" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="550"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53"/>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="42"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.ColumnSpan="4" FontStyle="Normal" FontSize="35" TextAlignment="Center" FontWeight="Heavy">
+            Bleakwind Buffet Menu Point of Sale
+        </TextBlock>
+        <Border Name="titleBorder" Grid.RowSpan="1" Grid.ColumnSpan="4" BorderThickness="3" BorderBrush="Green" />
+        <Border Name="menuBorder" Grid.RowSpan="9" Grid.ColumnSpan="4" BorderThickness="3" BorderBrush="Green" />
+        <local:OrderComponent Grid.Column="2" Grid.Row="0" Grid.RowSpan="10" Margin="0,0,5,0"/>
+        <Border Name="menuSectionsBorder" Grid.Column="0" Grid.Row="0" Grid.RowSpan="9" Margin="5,0,5,0">
+        </Border>
+    </Grid>
+</UserControl>
