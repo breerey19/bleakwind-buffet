@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Drinks;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -23,6 +24,7 @@ namespace PointOfSale
         public WarriorWaterCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
+            DataContext = new WarriorWater();
             ms = m;
             ml = l;
         }

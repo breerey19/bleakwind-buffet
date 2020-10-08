@@ -1,6 +1,7 @@
 ﻿using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 /*
@@ -12,7 +13,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class CandlehearthCoffee : Drink
+    public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
         /// <summary>
         /// Sets defaults for size, ice, cream, and decaf
@@ -20,7 +21,23 @@ namespace BleakwindBuffet.Data.Drinks
         private bool ice = false;
         private bool roomForCream = false;
         private bool decaf = false;
+        private Size size = Size.Small;
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Size Size
+        {
+            get { return this.size; }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
         /// <summary>
         /// Sets price of Candlehearth Coffee
         /// </summary>
@@ -75,6 +92,8 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                decaf = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
+
             }
         }
         /// <summary>
@@ -89,6 +108,8 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
@@ -104,6 +125,8 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 roomForCream = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
         /// <summary>

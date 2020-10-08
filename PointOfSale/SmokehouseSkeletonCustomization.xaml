@@ -30,16 +30,16 @@
             Customization Options
         </TextBlock>
         <ListBox Name="SSCustomizationListBox" Grid.Row="3" Grid.RowSpan="6" Margin="15,0,6,0" >
-            <CheckBox Name="SausageOption" >
+            <CheckBox Name="SausageOption" IsChecked="{Binding Path=SausageLink}">
                 Sausage Link
             </CheckBox>
-            <CheckBox Name="SSEggOption" >
+            <CheckBox Name="SSEggOption" IsChecked="{Binding Path=Egg}" >
                 Egg
             </CheckBox>
-            <CheckBox Name="HashbrownOption"  >
+            <CheckBox Name="HashbrownOption" IsChecked="{Binding Path=Hashbrowns}" >
                 Hashbrowns
             </CheckBox>
-            <CheckBox Name="PancakeOption" >
+            <CheckBox Name="PancakeOption" IsChecked="{Binding Path=Pancake}">
                 Pancake
             </CheckBox>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Entrees;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -55,6 +56,7 @@ namespace PointOfSale
         /// <param name="e">the event taking place</param>
         void BriarheartBurgerClicked(object sender, RoutedEventArgs e)
         {
+            //menuLayout.DataContext = new BriarheartBurger();
             menuLayout.SwapScreen(new BriarheartBurgerCustomization(this, menuLayout));
         }
 

@@ -30,13 +30,13 @@
             Customization Options
         </TextBlock>
         <ListBox Name="PPCustomizationListBox" Grid.Row="3" Grid.RowSpan="6" Margin="15,0,6,0" >
-            <CheckBox Name="SirloinOption" >
+            <CheckBox Name="SirloinOption" IsChecked="{Binding Path=Sirloin}">
                 Sirloin
             </CheckBox>
-            <CheckBox Name="OnionOption" >
+            <CheckBox Name="OnionOption" IsChecked="{Binding Path=Onion}" >
                 Onion
             </CheckBox>
-            <CheckBox Name="RollOption" >
+            <CheckBox Name="RollOption" IsChecked="{Binding Path=Roll}">
                 Roll
             </CheckBox>
         </ListBox>

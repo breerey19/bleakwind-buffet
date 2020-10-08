@@ -30,19 +30,19 @@
             Customization Options
         </TextBlock>
         <ListBox Name="BBCustomizationListBox" Grid.Row="3" Grid.RowSpan="6" Margin="15,0,6,0" >
-            <CheckBox Name="BunOption" >
+            <CheckBox Name="BunOption" IsChecked="{Binding Path=Bun}">
                 Bun
             </CheckBox>
-            <CheckBox Name="KetchupOption" >
+            <CheckBox Name="KetchupOption" IsChecked="{Binding Path=Ketchup}" >
                 Ketchup
             </CheckBox>
-            <CheckBox Name="MustardOption"  >
+            <CheckBox Name="MustardOption" IsChecked="{Binding Path=Mustard}">
                 Mustard
             </CheckBox>
-            <CheckBox Name="PickleOption">
+            <CheckBox Name="PickleOption" IsChecked="{Binding Path=Pickle}">
                 Pickle
             </CheckBox>
-            <CheckBox Name="CheeseOption">
+            <CheckBox Name="CheeseOption" IsChecked="{Binding Path=Cheese}">
                 Cheese
             </CheckBox>
         </ListBox>

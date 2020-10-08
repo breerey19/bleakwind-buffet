@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 /*
@@ -11,7 +12,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public class PhillyPoacher : Entree
+    public class PhillyPoacher : Entree, INotifyPropertyChanged
     {
         /// <summary>
         /// Sets price of Philly Poacher
@@ -30,13 +31,19 @@ namespace BleakwindBuffet.Data.Entrees
         private bool onion = true;
         private bool roll = true;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Sets value of sirloin, default is true
         /// </summary>
         public bool Sirloin
         {
             get { return sirloin; }
-            set { sirloin = value; }
+            set { 
+                sirloin = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>
@@ -45,7 +52,11 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Onion
         {
             get { return onion; }
-            set { onion = value; }
+            set { 
+                onion = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>
@@ -54,7 +65,11 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Roll
         {
             get { return roll; }
-            set { roll = value; }
+            set { 
+                roll = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>

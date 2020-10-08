@@ -24,7 +24,9 @@
         <TextBlock Grid.Column="3" Grid.Row="1" FontStyle="Normal" FontSize="17" TextAlignment="Center" FontWeight="SemiBold" Margin="0,2,0,0">
             Order Information
         </TextBlock>
-        <ListBox Grid.Column="3" Grid.Row="2" Grid.RowSpan="9" Name="ReceiptListBox" Margin="6,0,6,0"/>
+        <ListBox Grid.Column="3" Grid.Row="2" Grid.RowSpan="9" Name="ReceiptListBox" Margin="6,0,6,0">
+
+        </ListBox>
         <TextBox Name="subtotalTextBox" Grid.Column="3" Grid.Row="8" Margin="5,0,5,0">
             Subtotal:    
         </TextBox>

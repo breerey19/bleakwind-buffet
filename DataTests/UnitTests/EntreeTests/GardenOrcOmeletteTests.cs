@@ -8,11 +8,83 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class GardenOrcOmeletteTests
     {
+        [Fact]
+        public void ChangingBroccoliNotifiesBroccoliProperty()
+        {
+            var GOO = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(GOO, "Broccoli", () =>
+            {
+                GOO.Broccoli = true;
+            });
+
+            Assert.PropertyChanged(GOO, "Broccoli", () =>
+            {
+                GOO.Broccoli = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingMushroomsNotifiesMushroomsProperty()
+        {
+            var GOO = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(GOO, "Mushrooms", () =>
+            {
+                GOO.Mushrooms = true;
+            });
+
+            Assert.PropertyChanged(GOO, "Mushrooms", () =>
+            {
+                GOO.Mushrooms = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperty()
+        {
+            var GOO = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(GOO, "Tomato", () =>
+            {
+                GOO.Tomato = true;
+            });
+
+            Assert.PropertyChanged(GOO, "Tomato", () =>
+            {
+                GOO.Tomato = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingCheddarNotifiesCheddarProperty()
+        {
+            var GOO = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(GOO, "Cheddar", () =>
+            {
+                GOO.Cheddar = true;
+            });
+
+            Assert.PropertyChanged(GOO, "Cheddar", () =>
+            {
+                GOO.Cheddar = false;
+            });
+        }
+
+        [Fact]
+        public void ShouldImplementINotifyPropertyChanged()
+        {
+            GardenOrcOmelette goo = new GardenOrcOmelette();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(goo);
+        }
+
         [Fact]
         public void ShouldBeAnEntree()
         {

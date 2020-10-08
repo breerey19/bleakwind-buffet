@@ -1,6 +1,7 @@
 ﻿using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 /*
@@ -12,12 +13,30 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice : Drink
+    public class AretinoAppleJuice : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Sets defaults for size and ice
         /// </summary>
         private bool ice = false;
+        private Size size = Size.Small;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Size Size
+        {
+            get { return this.size; }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
 
         /// <summary>
         /// Sets price of Aretino Apple Juice
@@ -35,9 +54,11 @@ namespace BleakwindBuffet.Data.Drinks
                     case Size.Medium: return 0.87;
                     case Size.Large: return 1.01;
                     default: throw new NotImplementedException($"Unknown size of {Size}");
-            }
+                }               
 
             }
+
+
         }
 
         /// <summary>
@@ -73,6 +94,8 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
@@ -90,6 +113,8 @@ namespace BleakwindBuffet.Data.Drinks
             }
 
         }
+
+        
 
         /// <summary>
         /// returns the size and drink name in a string

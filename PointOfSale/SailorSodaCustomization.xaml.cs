@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Drinks;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -38,6 +39,7 @@ namespace PointOfSale
         public SailorSodaCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
+            DataContext = new SailorSoda();
             ms = m;
             ml = l;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Sides;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -38,6 +39,7 @@ namespace PointOfSale
         public DragonbornWaffleFriesCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
+            DataContext = new DragonbornWaffleFries();
             ms = m;
             ml = l;
         }

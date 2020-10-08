@@ -3,20 +3,37 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data;
+using System.ComponentModel;
 /*
- * Author: Bree Reynoso
- * Class name: DragonbornWaffleFries.cs
- * Purpose: Sets properties of prices, calories, size, and ToString override for Dragonborn Waffle Fries.
- */
+* Author: Bree Reynoso
+* Class name: DragonbornWaffleFries.cs
+* Purpose: Sets properties of prices, calories, size, and ToString override for Dragonborn Waffle Fries.
+*/
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class DragonbornWaffleFries : Side
+    public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
         /// <summary>
         /// Sets defaults for size
         /// </summary>
+        private Size size = Size.Small;
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Size Size
+        {
+            get { return this.size; }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
         /// <summary>
         /// Sets price of Dragonborn Waffle Fries
         /// </summary>

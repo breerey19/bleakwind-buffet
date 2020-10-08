@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Entrees;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -39,6 +40,7 @@ namespace PointOfSale
         public BriarheartBurgerCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
+            DataContext = new BriarheartBurger();
             ms = m;
             ml = l;
         }

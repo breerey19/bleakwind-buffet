@@ -30,16 +30,16 @@
             Customization Options
         </TextBlock>
         <ListBox Name="GOOCustomizationListBox" Grid.Row="3" Grid.RowSpan="6" Margin="15,0,6,0" >
-            <CheckBox Name="BroccoliOption" >
+            <CheckBox Name="BroccoliOption" IsChecked="{Binding Path=Broccoli}">
                 Broccoli
             </CheckBox>
-            <CheckBox Name="MushroomOption" >
+            <CheckBox Name="MushroomOption" IsChecked="{Binding Path=Mushrooms}">
                 Mushrooms
             </CheckBox>
-            <CheckBox Name="GooTomatoOption" >
+            <CheckBox Name="GooTomatoOption" IsChecked="{Binding Path=Tomato}" >
                 Tomato
             </CheckBox>
-            <CheckBox Name="CheddarOption" >
+            <CheckBox Name="CheddarOption" IsChecked="{Binding Path=Cheddar}">
                 Cheddar
             </CheckBox>
         </ListBox>

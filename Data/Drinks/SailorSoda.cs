@@ -1,6 +1,7 @@
 ﻿using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 /*
@@ -12,14 +13,30 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class SailorSoda : Drink
+    public class SailorSoda : Drink, INotifyPropertyChanged
     {
         /// <summary>
         /// Sets defaults for size, ice, and soda flavor
         /// </summary>
         private bool ice = true;
         private SodaFlavor sodaFlavor = SodaFlavor.Cherry;
+        private Size size = Size.Small;
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Size Size
+        {
+            get { return this.size; }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
         /// <summary>
         /// Sets price of Sailor's Soda
         /// </summary>
@@ -74,13 +91,15 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
 
         /// <summary>
         /// Sets soda flavor value, default is cherry
         /// </summary>
-        public SodaFlavor SodaFlavor
+        public virtual SodaFlavor SodaFlavor
         {
             get
             {
@@ -89,6 +108,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 sodaFlavor = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SodaFlavor"));
             }
         }
 

@@ -1,6 +1,7 @@
 ﻿using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 /*
@@ -11,8 +12,26 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class VokunSalad : Side
+    public class VokunSalad : Side, INotifyPropertyChanged
     {
+        private Size size = Size.Small;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Size Size
+        {
+            get { return this.size; }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
         /// <summary>
         /// Sets price of Vokun Salad
         /// </summary>

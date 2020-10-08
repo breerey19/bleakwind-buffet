@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Sides;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -38,6 +39,7 @@ namespace PointOfSale
         public MadOtarGritsCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
+            DataContext = new MadOtarGrits();
             ms = m;
             ml = l;
         }

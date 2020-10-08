@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data;
+using System.ComponentModel;
 
 /*
  * Author: Bree Reynoso
@@ -12,8 +13,26 @@ using BleakwindBuffet.Data;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class FriedMiraak : Side
+    public class FriedMiraak : Side, INotifyPropertyChanged
     {
+        private Size size = Size.Small;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Size Size
+        {
+            get { return this.size; }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
         /// <summary>
         /// Sets price of Fried Miraak
         /// </summary>

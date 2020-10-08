@@ -4,8 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
-                          d:DesignHeight="432" d:DesignWidth="800">
+             d:DesignHeight="432" d:DesignWidth="800"
+             xmlns:enums="clr-namespace:BleakwindBuffet.Data.Enums;assembly=data">
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="size" ObjectType="system:Enum" MethodName="GetValues">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="enums:Size"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="sodaFlavor" ObjectType="system:Enum" MethodName="GetValues">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="enums:SodaFlavor"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
@@ -30,38 +45,9 @@
             Customization Options
         </TextBlock>
         <ListBox Name="SSodaCustomizationListBox" Grid.Row="3" Grid.RowSpan="6" Margin="15,0,6,0" >
-            <ComboBox Name= "sizeComboBox">
-                <ComboBoxItem IsSelected="True">
-                    Small
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Medium
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Large
-                </ComboBoxItem>
-            </ComboBox>
-            <ComboBox Name= "sodaFlavorComboBox">
-                <ComboBoxItem IsSelected="True">
-                    Cherry
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Grapefruit
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Watermelon
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Blackberry
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Peach
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    Lemon
-                </ComboBoxItem>
-            </ComboBox>
-            <CheckBox Name="IceOption">
+            <ComboBox Name= "sizeComboBox" ItemsSource="{Binding Source={StaticResource size}}" SelectedItem="{Binding Path=size}" />
+            <ComboBox Name= "sodaFlavorComboBox" ItemsSource="{Binding Source={StaticResource sodaFlavor}}" SelectedItem="{Binding Path=sodaFlavor}"/>
+            <CheckBox Name="IceOption" IsChecked="{Binding Path=Ice}">
                 Ice
             </CheckBox>
         </ListBox>

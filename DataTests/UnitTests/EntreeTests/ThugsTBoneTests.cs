@@ -8,11 +8,19 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class ThugsTBoneTests
     {
+        //[Fact]
+        //public void ShouldImplementINotifyPropertyChanged()
+        //{
+        //    ThugsT_Bone tb = new ThugsT_Bone();
+        //    Assert.IsAssignableFrom<INotifyPropertyChanged>(tb);
+        //}
+
         [Fact]
         public void ShouldBeAnEntree()
         {

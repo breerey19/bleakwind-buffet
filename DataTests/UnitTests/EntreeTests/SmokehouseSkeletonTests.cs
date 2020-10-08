@@ -8,11 +8,86 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class SmokehouseSkeletonTests
     {
+        [Fact]
+        public void ChangingSausageLinkNotifiesSausageLinkProperty()
+        {
+            var SS = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(SS, "SausageLink", () =>
+            {
+                SS.SausageLink = true;
+            });
+
+            Assert.PropertyChanged(SS, "SausageLink", () =>
+            {
+                SS.SausageLink = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingEggNotifiesEggProperty()
+        {
+            var SS = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(SS, "Egg", () =>
+            {
+                SS.Egg = true;
+            });
+
+            Assert.PropertyChanged(SS, "Egg", () =>
+            {
+                SS.Egg = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingHashbrownsNotifiesHashbrownsProperty()
+        {
+            var SS = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(SS, "Hashbrowns", () =>
+            {
+                SS.Hashbrowns = true;
+            });
+
+            Assert.PropertyChanged(SS, "Hashbrowns", () =>
+            {
+                SS.Hashbrowns = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingPancakeNotifiesPancakeProperty()
+        {
+            var SS = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(SS, "Pancake", () =>
+            {
+                SS.Pancake = true;
+            });
+
+            Assert.PropertyChanged(SS, "Pancake", () =>
+            {
+                SS.Pancake = false;
+            });
+        }
+
+
+        [Fact]
+        public void ShouldImplementINotifyPropertyChanged()
+        {
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(ss);
+        }
+
+
+
         [Fact]
         public void ShouldBeAnEntree()
         {

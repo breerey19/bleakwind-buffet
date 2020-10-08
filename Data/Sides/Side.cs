@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Sides
 {
@@ -12,6 +13,7 @@ namespace BleakwindBuffet.Data.Sides
         /// The size of the side
         /// </summary>
         public virtual Size Size { get; set; }
+        
 
         /// <summary>
         /// The price of the side

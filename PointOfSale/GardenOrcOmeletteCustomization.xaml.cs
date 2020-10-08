@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BleakwindBuffet.Data.Entrees;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -38,6 +39,7 @@ namespace PointOfSale
         public GardenOrcOmeletteCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
+            DataContext = new GardenOrcOmelette();
             ms = m;
             ml = l;
         }

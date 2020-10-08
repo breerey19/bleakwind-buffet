@@ -30,34 +30,34 @@
             Customization Options
         </TextBlock>
         <ListBox Name="TTCustomizationListBox" Grid.Row="3" Grid.RowSpan="6" Margin="15,0,6,0" >
-            <CheckBox Name="BunOption" >
+            <CheckBox Name="BunOption" IsChecked="{Binding Path=Bun}">
                 Bun
             </CheckBox>
-            <CheckBox Name="KetchupOption" >
+            <CheckBox Name="KetchupOption" IsChecked="{Binding Path=Ketchup}" >
                 Ketchup
             </CheckBox>
-            <CheckBox Name="MustardOption"  >
+            <CheckBox Name="MustardOption" IsChecked="{Binding Path=Mustard}">
                 Mustard
             </CheckBox>
-            <CheckBox Name="PickleOption">
+            <CheckBox Name="PickleOption" IsChecked="{Binding Path=Pickle}">
                 Pickle
             </CheckBox>
-            <CheckBox Name="CheeseOption">
+            <CheckBox Name="CheeseOption" IsChecked="{Binding Path=Cheese}">
                 Cheese
             </CheckBox>
-            <CheckBox Name="TomatoOption" >
+            <CheckBox Name="TomatoOption" IsChecked="{Binding Path=Tomato}">
                 Tomato
             </CheckBox>
-            <CheckBox Name="LettuceOption" >
+            <CheckBox Name="LettuceOption" IsChecked="{Binding Path=Lettuce}" >
                 Lettuce
             </CheckBox>
-            <CheckBox Name="MayoOption" >
+            <CheckBox Name="MayoOption" IsChecked="{Binding Path=Mayo}" >
                 Mayo
             </CheckBox>
-            <CheckBox Name="BaconOption">
+            <CheckBox Name="BaconOption" IsChecked="{Binding Path=Bacon}" >
                 Bacon
             </CheckBox>
-            <CheckBox Name="EggOption">
+            <CheckBox Name="EggOption" IsChecked="{Binding Path=Egg}" >
                 Egg
             </CheckBox>
         </ListBox>
