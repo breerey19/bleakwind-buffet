@@ -36,5 +36,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
+
+        //public abstract string ToString { get; }
+
     }
 }

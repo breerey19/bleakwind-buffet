@@ -21,21 +21,37 @@
             <RowDefinition Height="18"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="3" Grid.Row="1" FontStyle="Normal" FontSize="17" TextAlignment="Center" FontWeight="SemiBold" Margin="0,2,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="105"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontStyle="Normal" FontSize="17" TextAlignment="Center" FontWeight="SemiBold" Margin="0,2,0,0">
             Order Information
         </TextBlock>
-        <ListBox Grid.Column="3" Grid.Row="2" Grid.RowSpan="9" Name="ReceiptListBox" Margin="6,0,6,0">
+        <ListBox  Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" Grid.RowSpan="6" Name="ReceiptListBox" Margin="5,0,5,0">
+            <ListView Name="OrderListView">
+
+            </ListView>
 
         </ListBox>
-        <TextBox Name="subtotalTextBox" Grid.Column="3" Grid.Row="8" Margin="5,0,5,0">
-            Subtotal:    
+        <TextBox Name="subtotalTextBox" Grid.Column="0"  Grid.Row="8" Margin="5,0,0,0">
+            Subtotal:
         </TextBox>
-        <TextBox Name="taxTextBox" Grid.Column="3" Grid.Row="9" Margin="5,0,5,0">
+        <TextBox Name="subtotalText" Grid.Column="1"  Grid.Row="8" Margin="0,0,5,0">
+
+        </TextBox>
+        <TextBox Name="taxTextBox" Grid.Column="0" Grid.Row="9" Margin="5,0,0,0">
             Tax:
         </TextBox>
-        <TextBox Name="totalTextBox" Grid.Column="3" Grid.Row="10" Margin="5,0,5,0">
+        <TextBox Name="taxText" Grid.Column="1" Grid.Row="9" Margin="0,0,5,0">
+
+        </TextBox>
+        <TextBox Name="totalTextBox" Grid.Column="0" Grid.Row="10" Margin="5,0,0,0">
             Total:
         </TextBox>
-        <Border Name="receiptItemsBorder" Grid.Column="3" Grid.Row="2" Grid.RowSpan="9" BorderThickness="3" BorderBrush="Black" Margin="6,0,6,0"/>
+        <TextBox Name="totalText" Grid.Column="1" Grid.Row="10" Margin="0,0,5,0">
+
+        </TextBox>
+        <Border Name="receiptItemsBorder" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="9" BorderThickness="3" BorderBrush="Black" Margin="5,0,5,0"/>
     </Grid>
 </UserControl>
