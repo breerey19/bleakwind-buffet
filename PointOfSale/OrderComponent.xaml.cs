@@ -32,6 +32,9 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        //Size does not change string name display or update any prices
+        //Need to figure out a way to best put a remove option for each item on order
+
 
         ///void DisplayOrderItems(object sender, RoutedEventArgs e)
         ///{

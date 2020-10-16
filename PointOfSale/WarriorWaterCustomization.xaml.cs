@@ -24,7 +24,7 @@ namespace PointOfSale
         public WarriorWaterCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new WarriorWater();
+            //DataContext = new WarriorWater();
             ms = m;
             ml = l;
         }

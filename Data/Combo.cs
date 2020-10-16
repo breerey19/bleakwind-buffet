@@ -17,7 +17,7 @@ using System.Xml;
 
 namespace BleakwindBuffet.Data
 {
-    public class Combo : INotifyPropertyChanged //IOrderItem,
+    public class Combo : IOrderItem, INotifyPropertyChanged 
     {
         //private string DrinkToString;
         private Size DrinkSize;

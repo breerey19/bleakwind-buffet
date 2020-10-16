@@ -46,7 +46,7 @@ namespace PointOfSale
         public AretinoAppleJuiceCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new AretinoAppleJuice();       
+            //DataContext = new AretinoAppleJuice();       
             ms = m;
             ml = l;
         }

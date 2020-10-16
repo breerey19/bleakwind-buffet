@@ -39,7 +39,7 @@ namespace PointOfSale
         public FriedMiraakCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new FriedMiraak();
+            //DataContext = new FriedMiraak();
             ms = m;
             ml = l;
         }

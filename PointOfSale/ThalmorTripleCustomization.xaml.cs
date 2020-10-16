@@ -39,7 +39,7 @@ namespace PointOfSale
         public ThalmorTripleCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new ThalmorTriple();
+            //DataContext = new ThalmorTriple();
             ms = m;
             ml = l;
         }

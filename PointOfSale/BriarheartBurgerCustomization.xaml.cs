@@ -40,7 +40,7 @@ namespace PointOfSale
         public BriarheartBurgerCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new BriarheartBurger();
+            //DataContext = new BriarheartBurger();
             ms = m;
             ml = l;
         }

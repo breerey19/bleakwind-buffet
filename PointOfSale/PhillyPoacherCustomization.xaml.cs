@@ -39,7 +39,7 @@ namespace PointOfSale
         public PhillyPoacherCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new PhillyPoacher();
+            //DataContext = new PhillyPoacher();
             ms = m;
             ml = l;
         }

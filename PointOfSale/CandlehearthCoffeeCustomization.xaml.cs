@@ -39,7 +39,7 @@ namespace PointOfSale
         public CandlehearthCoffeeCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new CandlehearthCoffee();
+            //DataContext = new CandlehearthCoffee();
             ms = m;
             ml = l;
         }

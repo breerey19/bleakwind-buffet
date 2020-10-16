@@ -39,7 +39,7 @@ namespace PointOfSale
         public SailorSodaCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new SailorSoda();
+            //DataContext = new SailorSoda();
             ms = m;
             ml = l;
         }

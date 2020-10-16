@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using BleakwindBuffet.Data;
 
@@ -24,5 +25,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Special instructions to prepare the entree
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        //public event PropertyChangedEventHandler PropertyChanged;
     }
 }

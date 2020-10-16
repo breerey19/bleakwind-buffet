@@ -39,7 +39,7 @@ namespace PointOfSale
         public DragonbornWaffleFriesCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new DragonbornWaffleFries();
+            //DataContext = new DragonbornWaffleFries();
             ms = m;
             ml = l;
         }

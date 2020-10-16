@@ -39,7 +39,7 @@ namespace PointOfSale
         public SmokehouseSkeletonCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new SmokehouseSkeleton();
+            //DataContext = new SmokehouseSkeleton();
             ms = m;
             ml = l;
         }

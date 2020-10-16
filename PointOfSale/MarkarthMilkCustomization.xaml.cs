@@ -39,7 +39,7 @@ namespace PointOfSale
         public MarkarthMilkCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new MarkarthMilk();
+            //DataContext = new MarkarthMilk();
             ms = m;
             ml = l;
         }

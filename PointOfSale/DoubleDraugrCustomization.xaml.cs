@@ -39,7 +39,7 @@ namespace PointOfSale
         public DoubleDraugrCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new DoubleDraugr();
+            //DataContext = new DoubleDraugr();
             ms = m;
             ml = l;
         }

@@ -39,7 +39,7 @@ namespace PointOfSale
         public VokunSaladCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new VokunSalad();
+            //DataContext = new VokunSalad();
             ms = m;
             ml = l;
         }

@@ -39,7 +39,7 @@ namespace PointOfSale
         public MadOtarGritsCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new MadOtarGrits();
+            //DataContext = new MadOtarGrits();
             ms = m;
             ml = l;
         }

@@ -10,15 +10,16 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="49"/>
-            <RowDefinition Height="49"/>
-            <RowDefinition Height="17"/>
-            <RowDefinition Height="17"/>
-            <RowDefinition Height="18"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -28,30 +29,42 @@
         <TextBlock Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontStyle="Normal" FontSize="17" TextAlignment="Center" FontWeight="SemiBold" Margin="0,2,0,0">
             Order Information
         </TextBlock>
-        <ListBox  Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" Grid.RowSpan="6" Name="ReceiptListBox" Margin="5,0,5,0">
-            <ListView Name="OrderListView">
-
-            </ListView>
-
+        <ListBox  Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Grid.RowSpan="7" Name="ReceiptListBox" Margin="5,0,5,0" ItemsSource="{Binding Path=Items}">
+            <ListBox.ItemTemplate >
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding}"/>
+                        <ListView ItemsSource="{Binding Path= SpecialInstructions}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}"/>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
-        <TextBox Name="subtotalTextBox" Grid.Column="0"  Grid.Row="8" Margin="5,0,0,0">
+        <TextBox Name="OrderNumberText" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Order #" TextAlignment="Center" Margin="5,0,5,0" FontWeight="Bold" FontSize="13" />
+        <TextBox Name="subtotalTextBox" Grid.Column="0"  Grid.Row="9" Margin="5,0,0,0" >
             Subtotal:
         </TextBox>
-        <TextBox Name="subtotalText" Grid.Column="1"  Grid.Row="8" Margin="0,0,5,0">
+        <TextBlock Name="subtotalText" Grid.Column="1"  Grid.Row="9" Margin="0,0,5,0" Text="{Binding Path=Subtotal}">
 
-        </TextBox>
-        <TextBox Name="taxTextBox" Grid.Column="0" Grid.Row="9" Margin="5,0,0,0">
+        </TextBlock>
+        <TextBox Name="taxTextBox" Grid.Column="0" Grid.Row="10" Margin="5,0,0,0">
             Tax:
         </TextBox>
-        <TextBox Name="taxText" Grid.Column="1" Grid.Row="9" Margin="0,0,5,0">
+        <TextBlock Name="taxText" Grid.Column="1" Grid.Row="10" Margin="0,0,5,0" Text="{Binding Path=Tax}">
 
-        </TextBox>
-        <TextBox Name="totalTextBox" Grid.Column="0" Grid.Row="10" Margin="5,0,0,0">
+        </TextBlock>
+        <TextBox Name="totalTextBox" Grid.Column="0" Grid.Row="11" Margin="5,0,0,0">
             Total:
         </TextBox>
-        <TextBox Name="totalText" Grid.Column="1" Grid.Row="10" Margin="0,0,5,0">
+        <TextBlock Name="totalText" Grid.Column="1" Grid.Row="11" Margin="0,0,5,0" Text="{Binding Path=Total}">
 
-        </TextBox>
-        <Border Name="receiptItemsBorder" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="9" BorderThickness="3" BorderBrush="Black" Margin="5,0,5,0"/>
+        </TextBlock>
+        <Border Name="receiptItemsBorder" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="10" BorderThickness="3" BorderBrush="Black" Margin="5,0,5,0"/>
+        
     </Grid>
 </UserControl>

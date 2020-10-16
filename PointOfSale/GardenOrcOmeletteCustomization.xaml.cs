@@ -39,7 +39,7 @@ namespace PointOfSale
         public GardenOrcOmeletteCustomization(MenuSections m, MenuLayout l)
         {
             InitializeComponent();
-            DataContext = new GardenOrcOmelette();
+            //DataContext = new GardenOrcOmelette();
             ms = m;
             ml = l;
         }

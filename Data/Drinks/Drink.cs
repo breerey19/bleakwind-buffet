@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Text;
 using BleakwindBuffet.Data;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
@@ -35,6 +36,9 @@ namespace BleakwindBuffet.Data.Drinks
         /// Special instructions to preparethe drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+
+        //public event PropertyChangedEventHandler PropertyChanged;
 
 
         //public abstract string ToString { get; }
