@@ -186,6 +186,7 @@ namespace PointOfSale
             var order = (Order)DataContext;
             order.Add(mog);
             menuLayout.SwapScreen(mogc);
+            
         }
 
         /// <summary>
@@ -301,6 +302,18 @@ namespace PointOfSale
             FriedMiraakButton.IsEnabled = true;
             MadOtarGritsButton.IsEnabled = true;
             VokunSaladButton.IsEnabled = true;
+
+            ComboButton.IsEnabled = true;
+        }
+
+        private void ComboButton_Click(object sender, RoutedEventArgs e)
+        {
+            ComboCustomization cc = new ComboCustomization(this, menuLayout);
+            var combo = new Combo();
+            cc.DataContext = combo;
+            var order = (Order)DataContext;
+            order.Add(combo);
+            menuLayout.SwapScreen(cc);
         }
     }
 }

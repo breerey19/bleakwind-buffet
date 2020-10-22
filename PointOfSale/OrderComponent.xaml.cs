@@ -1,8 +1,10 @@
-﻿using System;
+﻿using BleakwindBuffet.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -24,12 +26,38 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderComponent : UserControl
     {
+        private Order order = new Order();
         /// <summary>
         /// The order /reciept screen to be shown when built
         /// </summary>
         public OrderComponent()
         {
             InitializeComponent();
+            var order = (Order)DataContext;
+            //var order = new Order();
+        }
+
+        private void RemoveFromOrder_Click(object sender, RoutedEventArgs e)
+        {
+            //if (DataContext is Order order)
+            //{
+               //var itemBeingRemoved = (IOrderItem)order.SelectedItem;
+                //order.Remove(itemBeingRemoved);
+                //order.Remove((IOrderItem) ReceiptListBox.SelectedItem);
+                //CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, items));
+            //}
+        }
+
+        private void CompleteOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            //open payment screen
+            //update order number for next order
+
+        }
+
+        private void CancelOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         //Size does not change string name display or update any prices

@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="PointOfSale.ComboCustomization"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="432" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Border Name="customizationBorder" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="9" BorderThickness="3" BorderBrush="Black" Margin="6,0,6,0"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" TextAlignment="Center" FontSize="20" FontWeight="Medium">
+            Customization Options
+        </TextBlock>
+        <TextBlock Grid.Row="2"  Grid.Column="0" TextAlignment="Center" FontSize="15" FontWeight="Regular">
+            Entree
+        </TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Center" FontSize="15" FontWeight="Regular">
+            Drink
+        </TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="2" TextAlignment="Center" FontSize="15" FontWeight="Regular">
+            Side
+        </TextBlock>
+
+        <Border Name="menuItemBorder" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="7" BorderThickness="3" BorderBrush="Black" Margin="6,0,6,0"/>
+        <Button Grid.Row="3" Click="BriarheartBurgerClicked" Name="BriarheartBurgerButton" Margin="12,3,4,3" DataContext="BriarheartBurger.cs">
+            Briarheart Burger
+        </Button>
+        <Button Grid.Row="4" Click="DoubleDraugrClicked" Name="DoubleDraugrButton" Margin="12,3,4,3">
+            Double Draugr
+        </Button>
+        <Button Grid.Row="5" Click="ThalmorTripleClicked" Name="ThalmorTripleButton" Margin="12,3,4,3">
+            Thalmor Triple
+        </Button>
+        <Button Grid.Row="6" Name="ThugsTBoneButton" Margin="12,3,4,3">
+            Thugs T-Bone
+        </Button>
+        <Button Grid.Row="7" Click="PhillyPoacherClicked" Name="PhillyPoacherButton" Margin="12,3,4,3">
+            Philly Poacher
+        </Button>
+        <Button Grid.Row="8" Click="GardenOrcOmeletteClicked" Name="GardenOrcOmeletteButton" Margin="12,3,4,3">
+            Garden Orc Omelette
+        </Button>
+        <Button Grid.Row="9" Click="SmokehouseSkeletonClicked" Name="SmokehouseSkeletonButton" Margin="12,3,4,3">
+            Smokehouse Skeleton
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="1" Click="WarriorWaterClicked" Name="WarriorWaterButton" Margin="2,3,4,3">
+            Warrior Water
+        </Button>
+        <Button Grid.Row="4" Grid.Column="1" Click="SailorSodaClicked" Name="SailorSodaButton" Margin="2,3,4,3">
+            Sailor Soda
+        </Button>
+        <Button Grid.Row="5" Grid.Column="1" Click="AretinoAppleJuiceClicked" Name="AretinoAppleJuiceButton" Margin="2,3,4,3">
+            Aretino Apple Juice
+        </Button>
+        <Button Grid.Row="6" Grid.Column="1" Click="MarkarthMilkClicked" Name="MarkarthMilkButton" Margin="2,3,4,3">
+            Markarth Milk
+        </Button>
+        <Button Grid.Row="7" Grid.Column="1" Click="CandlehearthCoffeeClicked" Name="CandlehearthCoffeeButton" Margin="2,3,4,3">
+            Candlehearth Coffee
+        </Button>
+
+        <Button Grid.Row="3" Grid.Column="2" Click="DragonbornWaffleFriesClicked" Name="DragonbornWaffleFriesButton" Margin="2,3,12,3">
+            Dragonborn Waffle Fries
+        </Button>
+        <Button Grid.Row="4" Grid.Column="2" Click="FriedMiraakClicked" Name="FriedMiraakButton" Margin="2,3,12,3">
+            Fried Miraak
+        </Button>
+        <Button Grid.Row="5" Grid.Column="2" Click="MadOtarGritsClicked" Name="MadOtarGritsButton" Margin="2,3,12,3">
+            Mad Otar Grits
+        </Button>
+        <Button Grid.Row="6" Grid.Column="2" Click="VokunSaladClicked" Name="VokunSaladButton" Margin="2,3,12,3">
+            Vokun Salad
+        </Button>
+
+
+
+        <Button Click="doneButton_Click" Name="doneButton" Grid.Column="2" Grid.Row="10" Margin="2,5,12,5">
+            Done
+        </Button>
+    </Grid>
+</UserControl>

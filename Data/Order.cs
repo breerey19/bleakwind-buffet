@@ -14,7 +14,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data
 {
-    public class Order : INotifyPropertyChanged
+    public class Order : INotifyPropertyChanged //ObservableCollection<IOrderItem>, INotifyCollectionChanged, 
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -108,6 +108,47 @@ namespace BleakwindBuffet.Data
             }
         }
 
+        /// <summary>
+        /// Updates the items in the IOrderItems list and calls the CollectionItemChangedListener to update
+        /// </summary>
+        /// <param name="sender">object affected</param>
+        /// <param name="e">event of property of object changing</param>
+        //void CollectionChangedListener(object sender, NotifyCollectionChangedEventArgs e)
+        //{
+        //    OnPropertyChanged(new PropertyChangedEventArgs("Add"));
+        //    OnPropertyChanged(new PropertyChangedEventArgs("Remove"));
+        //    switch (e.Action)
+        //    {
+        //       case NotifyCollectionChangedAction.Add:
+        //            foreach (IOrderItem item in e.NewItems)
+        //            {
+        //                item.PropertyChanged += CollectionItemChangedListener;
+        //            }
+        //            break;
+        //        case NotifyCollectionChangedAction.Remove:
+        //            foreach (IOrderItem item in e.OldItems)
+        //            {
+        //                item.PropertyChanged += CollectionItemChangedListener;
+        //            }
+        //            break;
+        //        case NotifyCollectionChangedAction.Reset:
+        //            throw new NotImplementedException("NotifyCollectionChangedAction.Reset not supported");
+        //    }
+        //}
+
+        /// <summary>
+        /// Adds or removes item from order
+        /// </summary>
+        /// <param name="sender">object affected</param>
+        /// <param name="e">event of property of object changing</param>
+        //void CollectionItemChangedListener(object sender, PropertyChangedEventArgs e)
+        //{
+            //if(e.PropertyName == "Add")
+            //{
+            //    OnPropertyChanged(new PropertyChangedEventArgs("Add"));
+            //OnPropertyChanged(new PropertyChangedEventArgs("Remove"));
+            //}
+        //}
 
 
 

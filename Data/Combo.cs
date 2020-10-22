@@ -35,11 +35,12 @@ namespace BleakwindBuffet.Data
         private List<string> EntreeSpecialInstructions;
 
 
-        public Combo(Entree entree, Side side, Drink drink)
+        public Combo()
         {
-            drink = Drink;
-            side = Side;
-            entree = Entree;
+            //Entree entree, Side side, Drink drink
+            //drink = Drink;
+            //side = Side;
+            //entree = Entree;
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Side"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Entree"));

@@ -85,5 +85,9 @@
         <Button Grid.Row="5" Grid.Column="2" Click="VokunSaladClicked" Name="VokunSaladButton" Margin="2,3,12,3">
             Vokun Salad
         </Button>
+
+        <Button Grid.Row="8" Grid.Column="2" Click="ComboButton_Click" Name="ComboButton" Margin="2,3,12,6">
+            Make a Combo
+        </Button>
     </Grid>
 </UserControl>
