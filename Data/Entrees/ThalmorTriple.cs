@@ -24,6 +24,8 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 943;
 
+        public override string Name => "Thalmor Triple";
+
         /// <summary>
         /// Sets ingredient values to true as default
         /// </summary>

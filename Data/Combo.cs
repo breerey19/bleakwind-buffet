@@ -24,6 +24,7 @@ namespace BleakwindBuffet.Data
         private double DrinkPrice;
         private uint DrinkCalories;
         private List<string> DrinkSpecialInstructions;
+        public string Name;
 
         private Size SideSize;
         private double SidePrice;
@@ -142,6 +143,10 @@ namespace BleakwindBuffet.Data
                 }
             }
         }
+
+
+
+        string IOrderItem.Name => throw new NotImplementedException();
 
         //List<string> IOrderItem.SpecialInstructions => ((IOrderItem)Drink).SpecialInstructions;
 

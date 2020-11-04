@@ -23,7 +23,9 @@ namespace BleakwindBuffet.Data.Entrees
         /// Sets calories of Thugs T-Bone
         /// </summary>
         public override uint Calories => 982;
-        
+
+        public override string Name => "Thugs T-Bone";
+
         /// <summary>
         /// No instructions, empty list should be returned always
         /// </summary>

@@ -14,6 +14,11 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         public virtual Size Size { get; set; }
         
+        /// <summary>
+        /// The Name without Size in front of it
+        /// </summary>
+        public abstract string Name { get; }
+
 
         /// <summary>
         /// The price of the side

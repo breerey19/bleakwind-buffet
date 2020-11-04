@@ -23,6 +23,8 @@ namespace BleakwindBuffet.Data.Drinks
         private bool ice = false;
         private Size size = Size.Small;
 
+        public override string Name => "Aretino Apple Juice";
+
         /// <summary>
         /// 
         /// </summary>

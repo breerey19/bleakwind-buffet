@@ -17,6 +17,8 @@ namespace BleakwindBuffet.Data.Sides
         private Size size = Size.Small;
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public override string Name => "Vokun Salad";
+
         /// <summary>
         /// 
         /// </summary>

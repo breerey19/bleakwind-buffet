@@ -24,6 +24,8 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 602;
 
+        public override string Name => "Smokehouse Skeleton";
+
         /// <summary>
         /// Sets ingredient values to true as default
         /// </summary>

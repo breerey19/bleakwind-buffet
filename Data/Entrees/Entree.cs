@@ -8,6 +8,8 @@ namespace BleakwindBuffet.Data.Entrees
 {
     public abstract class Entree : IOrderItem
     {
+        public abstract string Name { get; }
+
         /// <summary>
         /// The price of the entree
         /// </summary>

@@ -46,6 +46,7 @@ namespace BleakwindBuffet.Data
             return entrees;
         }
 
+
         /// <summary>
         /// Sides() which returns an IEnumerable<IOrderItem> containing an instance of all available sides offered by Bleakwind Buffet. 
         /// As each side has 3 different sizes, this collection should contain a small, medium, and large instance of each.
@@ -241,7 +242,6 @@ namespace BleakwindBuffet.Data
 
             return drinks;
         }
-
 
         /// <summary>
         /// FullMenu() should return an IEnumerable<IOrderItem> containing all of the items on the menu

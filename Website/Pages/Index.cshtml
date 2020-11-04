@@ -1,0 +1,120 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<div class="text-center">
+    <h1 class="title">Welcome to Bleakwind Buffet!</h1>
+    <p class="page-info">
+        We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
+        Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas.
+        Hack into a Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger!
+        You’ve had a hard adventure and earned your loot, so spend it with us!.
+    </p>
+</div>
+
+<ul class="menulist">
+
+    <li>
+        <h2 class="category">Entrees</h2>
+        @foreach (BleakwindBuffet.Data.Entrees.Entree entree in BleakwindBuffet.Data.Menu.Entrees())
+        {
+            <div class="menu-item">
+                <div class="info">
+                    <h3 class="entree-item">@entree.ToString()</h3>
+                    <div class="item-price">$@entree.Price</div>
+                    <div class="item-calories">Cal: @entree.Calories</div>
+                </div>
+            </div>
+        }
+
+
+
+        <h2 class="category">Sides</h2>
+        @foreach (BleakwindBuffet.Data.Sides.Side side in BleakwindBuffet.Data.Menu.Sides())
+        {
+            <div class="menu-item">
+                @if (side.Size == BleakwindBuffet.Data.Enums.Size.Small)
+                {
+                    <h3 class="side-item">@side.Name</h3>
+                }
+                <div class="info">
+                    <div class="size">@side.Size</div>
+                    <div class="item-price">$@side.Price</div>
+                    <div class="item-calories">Cal: @side.Calories</div>
+                </div>
+
+            </div>
+        }
+
+
+        <h2 class="category">Drinks</h2>
+        @foreach (BleakwindBuffet.Data.Drinks.Drink drink in BleakwindBuffet.Data.Menu.Drinks())
+        {
+            <div class="menu-item">
+                @if (drink.Name != "Sailor Soda")
+                {
+                    @if (drink.Size == BleakwindBuffet.Data.Enums.Size.Small)
+                    {
+                        <h3 class="drink-item">@drink.Name</h3>
+                    }
+                    <div class="info">
+                        <div class="size">@drink.Size</div>
+                        <div class="item-price">$@drink.Price</div>
+                        <div class="item-calories">Cal: @drink.Calories</div>
+                    </div>
+                }
+                @if (drink.Name == "Sailor Soda")
+                {
+                    if (drink.ToString() == "Small Cherry Sailor Soda")
+                    {
+                        <h3 class="drink-item">@drink.Name</h3>
+                        <div class="info">
+                            <div class="size">@drink.Size</div>
+                            <div class="item-price">$@drink.Price</div>
+                            <div class="item-calories">Cal: @drink.Calories</div>
+                        </div>
+                    }
+                    if (drink.ToString() == "Medium Cherry Sailor Soda")
+                    {
+                        <div class="info">
+                            <div class="size">@drink.Size</div>
+                            <div class="item-price">$@drink.Price</div>
+                            <div class="item-calories">Cal: @drink.Calories</div>
+                        </div>
+                    }
+                    if (drink.ToString() == "Large Cherry Sailor Soda")
+                    {
+                        <div class="info">
+                            <div class="size">@drink.Size</div>
+                            <div class="item-price">$@drink.Price</div>
+                            <div class="item-calories">Cal: @drink.Calories</div>
+                        </div>
+                    }
+
+                }
+            </div>
+        }
+ 
+
+        <div class="category">
+            <h3>Combos:</h3>
+            <p>Any combination of an entree, side, and drink can be added as a Combo allowing a $1 discount</p>
+        </div>
+
+        <div class="category">
+            <h3>Soda Flavor Options for Sailor Soda</h3>
+            <div class="sodaflavor">Blackberry</div>
+            <div class="sodaflavor">Cherry</div>
+            <div class="sodaflavor">Grapefruit</div>
+            <div class="sodaflavor">Lemon</div>
+            <div class="sodaflavor">Peach</div>
+            <div class="sodaflavor">Watermelon</div>
+        </div>
+    </li>
+
+
+</ul>

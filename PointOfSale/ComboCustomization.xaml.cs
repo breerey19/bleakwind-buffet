@@ -75,7 +75,7 @@ namespace PointOfSale
             MadOtarGritsButton.IsEnabled = true;
             VokunSaladButton.IsEnabled = true;
 
-            ComboButton.IsEnabled = true;
+            //ComboButton.IsEnabled = true;
         }
 
         /// <summary>

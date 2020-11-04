@@ -18,6 +18,10 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public virtual Size Size { get; set; }
 
+        /// <summary>
+        /// The name without the size or flavor in front of it
+        /// </summary>
+        public abstract string Name { get; }
 
         /// <summary>
         /// The price of the drink

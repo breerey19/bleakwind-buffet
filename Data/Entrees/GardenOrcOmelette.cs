@@ -24,6 +24,8 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 404;
 
+        public override string Name => "Garden Orc Omelette";
+
         /// <summary>
         /// Sets ingredient values to true as default
         /// </summary>

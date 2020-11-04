@@ -26,6 +26,8 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 734;
 
+        public override string Name => "Briarheart Burger";
+
         /// <summary>
         /// Sets ingredient values to true as default
         /// </summary>

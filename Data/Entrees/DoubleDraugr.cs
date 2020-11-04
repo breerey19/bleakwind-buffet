@@ -24,6 +24,8 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 843;
 
+        public override string Name => "Double Draugr";
+
         /// <summary>
         /// Sets ingredient values to true as default
         /// </summary>

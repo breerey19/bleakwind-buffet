@@ -26,5 +26,7 @@ namespace BleakwindBuffet.Data
         //string ToString { get; }
 
         List<string> SpecialInstructions { get; }
+
+        string Name { get; }
     }
 }
