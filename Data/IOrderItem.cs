@@ -28,5 +28,7 @@ namespace BleakwindBuffet.Data
         List<string> SpecialInstructions { get; }
 
         string Name { get; }
+
+        //Size size { get; }
     }
 }

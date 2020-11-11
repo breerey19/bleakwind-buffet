@@ -19,9 +19,25 @@ namespace Website.Pages
             _logger = logger;
         }
 
+        public IEnumerable<IOrderItem> orderItems { get; set; }
+
+
+
+        public string SearchTerms { get; set; }
+
         public void OnGet()
         {
-
+            SearchTerms = Request.Query["SearchTerms"];
+            Category = Request.Query["Category"];
+            orderItems = Menu.FullMenu();
+            orderItems = Menu.Search(orderItems, SearchTerms);
+            orderItems = Menu.FilterByCategory(orderItems, Category);
+            //Price = double.Parse(Request.Query["Price"]);
         }
+
+        /// <summary>
+        /// The filtered MPAA Ratings
+        /// </summary>
+        public string[] Category { get; set; }
     }
 }
