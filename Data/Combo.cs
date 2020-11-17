@@ -147,6 +147,7 @@ namespace BleakwindBuffet.Data
 
 
         string IOrderItem.Name => throw new NotImplementedException();
+        string IOrderItem.Description => throw new NotImplementedException();
 
         //List<string> IOrderItem.SpecialInstructions => ((IOrderItem)Drink).SpecialInstructions;
 

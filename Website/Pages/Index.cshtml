@@ -16,7 +16,7 @@
     </p>
 </div>
 
-<form id="menu-database>
+<form id="menu-database">
 
     <div id="search">
         <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
@@ -55,95 +55,95 @@
 
     <div>
         <ul class="menulist">
-
             <li>
-                <h2 class="category">Entrees</h2>
-                @foreach (BleakwindBuffet.Data.Entrees.Entree entree in BleakwindBuffet.Data.Menu.Entrees())
-                {
-                    <div class="menu-item">
-                        <div class="info">
-                            <h3 class="entree-item">@entree.ToString()</h3>
-                            <div class="item-price">$@entree.Price</div>
-                            <div class="item-calories">Cal: @entree.Calories</div>
-                        </div>
-                    </div>
-                }
+                <div class="flex-columns">
 
-
-
-                <h2 class="category">Sides</h2>
-                @foreach (BleakwindBuffet.Data.Sides.Side side in BleakwindBuffet.Data.Menu.Sides())
-                {
-                    <div class="menu-item">
-                        @if (side.Size == BleakwindBuffet.Data.Enums.Size.Small)
-                        {
-                            <h3 class="side-item">@side.Name</h3>
-                        }
-                        <div class="info">
-                            <div class="size">@side.Size</div>
-                            <div class="item-price">$@side.Price</div>
-                            <div class="item-calories">Cal: @side.Calories</div>
-                        </div>
-
-                    </div>
-                }
-
-
-                <h2 class="category">Drinks</h2>
-                @foreach (BleakwindBuffet.Data.Drinks.Drink drink in BleakwindBuffet.Data.Menu.Drinks())
-                {
-            <div class="menu-item">
-                @if (drink.Name != "Sailor Soda")
-                {
-                    @if (drink.ToString() != "Small Decaf Candlehearth Coffee" || drink.ToString() != "Medium Decaf Candlehearth Coffee" ||
-                 drink.ToString() != "Large Decaf Candlehearth Coffee")
+                    <h2 class="category">Entrees</h2>
+                    @foreach (BleakwindBuffet.Data.Entrees.Entree entree in BleakwindBuffet.Data.Menu.Entrees())
                     {
-                        @if (drink.Size == BleakwindBuffet.Data.Enums.Size.Small)
-                        {
-                            <h3 class="drink-item">@drink.Name</h3>
-                        }
-                        <div class="info">
-                            <div class="size">@drink.Size</div>
-                            <div class="item-price">$@drink.Price</div>
-                            <div class="item-calories">Cal: @drink.Calories</div>
+                        <div class="menu-item">
+                            <div class="info">
+                                <h3 class="entree-item">@entree.ToString()</h3>
+                                <div class="item-price">$@entree.Price</div>
+                                <div class="item-calories">Cal: @entree.Calories</div>
+                            </div>
                         </div>
                     }
 
-                }
-                    @if (drink.ToString() == "Small Cherry Sailor Soda" || drink.ToString() == "Medium Cherry Sailor Soda" || drink.ToString() == "Large Cherry Sailor Soda")
+
+
+                    <h2 class="category">Sides</h2>
+                    @foreach (BleakwindBuffet.Data.Sides.Side side in BleakwindBuffet.Data.Menu.Sides())
                     {
-                        @if (drink.Size == BleakwindBuffet.Data.Enums.Size.Small)
-                        {
-                            <h3 class="drink-item">@drink.Name</h3>
-                        }
-                        <div class="info">
-                            <div class="size">@drink.Size</div>
-                            <div class="item-price">$@drink.Price</div>
-                            <div class="item-calories">Cal: @drink.Calories</div>
+                        <div class="menu-item">
+                            @if (side.Size == BleakwindBuffet.Data.Enums.Size.Small)
+                            {
+                                <h3 class="side-item">@side.Name</h3>
+                            }
+                            <div class="info">
+                                <div class="size">@side.Size</div>
+                                <div class="item-price">$@side.Price</div>
+                                <div class="item-calories">Cal: @side.Calories</div>
+                            </div>
+
                         </div>
                     }
-                
-            </div>
-                }
 
 
-                <div class="category">
-                    <h3>Combos:</h3>
-                    <p>Any combination of an entree, side, and drink can be added as a Combo allowing a $1 discount</p>
-                </div>
+                    <h2 class="category">Drinks</h2>
+                    @foreach (BleakwindBuffet.Data.Drinks.Drink drink in BleakwindBuffet.Data.Menu.Drinks())
+                    {
+                        <div class="menu-item">
+                            @if (drink.Name != "Sailor Soda")
+                            {
+                                @if (drink.ToString() != "Small Decaf Candlehearth Coffee" || drink.ToString() != "Medium Decaf Candlehearth Coffee" ||
+                          drink.ToString() != "Large Decaf Candlehearth Coffee")
+                                {
+                                    @if (drink.Size == BleakwindBuffet.Data.Enums.Size.Small)
+                                    {
+                                        <h3 class="drink-item">@drink.Name</h3>
+                                    }
+                                    <div class="info">
+                                        <div class="size">@drink.Size</div>
+                                        <div class="item-price">$@drink.Price</div>
+                                        <div class="item-calories">Cal: @drink.Calories</div>
+                                    </div>
+                                }
 
-                <div class="category">
-                    <h3>Soda Flavor Options for Sailor Soda</h3>
-                    <div class="sodaflavor">Blackberry</div>
-                    <div class="sodaflavor">Cherry</div>
-                    <div class="sodaflavor">Grapefruit</div>
-                    <div class="sodaflavor">Lemon</div>
-                    <div class="sodaflavor">Peach</div>
-                    <div class="sodaflavor">Watermelon</div>
+                            }
+                            @if (drink.ToString() == "Small Cherry Sailor Soda" || drink.ToString() == "Medium Cherry Sailor Soda" || drink.ToString() == "Large Cherry Sailor Soda")
+                            {
+                                @if (drink.Size == BleakwindBuffet.Data.Enums.Size.Small)
+                                {
+                                    <h3 class="drink-item">@drink.Name</h3>
+                                }
+                                <div class="info">
+                                    <div class="size">@drink.Size</div>
+                                    <div class="item-price">$@drink.Price</div>
+                                    <div class="item-calories">Cal: @drink.Calories</div>
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+
+                    <div class="category">
+                        <h3>Combos:</h3>
+                        <p>Any combination of an entree, side, and drink can be added as a Combo allowing a $1 discount</p>
+                    </div>
+
+                    <div class="category">
+                        <h3>Soda Flavor Options for Sailor Soda</h3>
+                        <div class="sodaflavor">Blackberry</div>
+                        <div class="sodaflavor">Cherry</div>
+                        <div class="sodaflavor">Grapefruit</div>
+                        <div class="sodaflavor">Lemon</div>
+                        <div class="sodaflavor">Peach</div>
+                        <div class="sodaflavor">Watermelon</div>
+                    </div>
                 </div>
             </li>
-
-
         </ul>
     </div>
 

@@ -29,6 +29,8 @@ namespace BleakwindBuffet.Data
 
         string Name { get; }
 
+        string Description { get; }
+
         //Size size { get; }
     }
 }

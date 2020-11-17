@@ -469,7 +469,12 @@ namespace BleakwindBuffet.Data
             {
                 if (item.ToString() != null && item.ToString().Contains(terms))
                 {
-                    //Add the movie if the title is a match
+                    //Add the item if the term is in the name
+                    results.Add(item);
+                }
+                if (item.Description != null && item.Description.Contains(terms))
+                {
+                    //Add the item if the description matches a term
                     results.Add(item);
                 }
             }

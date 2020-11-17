@@ -24,6 +24,7 @@ namespace Website.Pages
 
 
         public string SearchTerms { get; set; }
+        //How to break up search into multiple search terms
 
         public void OnGet()
         {
@@ -36,7 +37,7 @@ namespace Website.Pages
         }
 
         /// <summary>
-        /// The filtered MPAA Ratings
+        /// The filtered category (entree, side, drink)
         /// </summary>
         public string[] Category { get; set; }
     }

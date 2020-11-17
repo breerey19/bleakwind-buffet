@@ -26,7 +26,15 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 734;
 
+        /// <summary>
+        /// name of item
+        /// </summary>
         public override string Name => "Briarheart Burger";
+
+        /// <summary>
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.";
 
         /// <summary>
         /// Sets ingredient values to true as default

@@ -24,10 +24,18 @@ namespace BleakwindBuffet.Data.Drinks
         private Size size = Size.Small;
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// name of item without decaf or size
+        /// </summary>
         public override string Name => "Candlehearth Coffee";
 
         /// <summary>
-        /// 
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "Fair trade, fresh ground dark roast coffee.";
+
+        /// <summary>
+        /// returns size of drink
         /// </summary>
         public override Size Size
         {

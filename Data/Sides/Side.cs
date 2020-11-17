@@ -19,6 +19,10 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         public abstract string Name { get; }
 
+        /// <summary>
+        /// Gives desscription of item
+        /// </summary>
+        public abstract string Description { get; }
 
         /// <summary>
         /// The price of the side

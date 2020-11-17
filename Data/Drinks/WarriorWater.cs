@@ -23,10 +23,18 @@ namespace BleakwindBuffet.Data.Drinks
         private Size size = Size.Small;
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// name without size
+        /// </summary>
         public override string Name => "Warrior Water";
 
         /// <summary>
-        /// 
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "It’s water. Just water.";
+
+        /// <summary>
+        /// returns size of drink
         /// </summary>
         public override Size Size
         {

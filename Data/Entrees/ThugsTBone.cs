@@ -24,7 +24,16 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 982;
 
+        /// <summary>
+        /// name of item
+        /// </summary>
         public override string Name => "Thugs T-Bone";
+
+        /// <summary>
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "Juicy T-Bone, not much else to say.";
+
 
         /// <summary>
         /// No instructions, empty list should be returned always

@@ -24,7 +24,16 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 784;
 
+        /// <summary>
+        /// name of item
+        /// </summary>
         public override string Name => "Philly Poacher";
+
+        /// <summary>
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.";
+
 
         /// <summary>
         /// Sets ingredient values to true as default

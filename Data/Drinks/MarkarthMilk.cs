@@ -22,10 +22,18 @@ namespace BleakwindBuffet.Data.Drinks
         private Size size = Size.Small;
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// name of item without size
+        /// </summary>
         public override string Name => "Markarth Milk";
 
         /// <summary>
-        /// 
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "Hormone-free organic 2% milk.";
+
+        /// <summary>
+        /// returns size of drink
         /// </summary>
         public override Size Size
         {

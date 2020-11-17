@@ -17,10 +17,18 @@ namespace BleakwindBuffet.Data.Sides
         private Size size = Size.Small;
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// name of item without size
+        /// </summary>
         public override string Name => "Mad Otar Grits";
 
         /// <summary>
-        /// 
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "Cheesey Grits.";
+
+        /// <summary>
+        /// size of side
         /// </summary>
         public override Size Size
         {

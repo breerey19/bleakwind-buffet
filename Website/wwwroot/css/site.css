@@ -12,6 +12,12 @@ a {
   color: #0366d6;
 }
 
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -80,7 +86,7 @@ ul.menulist {
     ul.menulist > li {
         margin: 10px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         /* min-height: 50px;
@@ -138,7 +144,7 @@ ul.menulist {
     margin: 5px;
     margin-left: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     
@@ -149,7 +155,7 @@ ul.menulist {
     margin: 5px;
     margin-left: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     font-weight: 500;
@@ -198,4 +204,45 @@ ul.menulist {
     /*justify-content: space-between;*/
     align-items: flex-start;
     font-weight: 400;
+}
+
+@media (max-width: 750px) {
+    /* applies when the screen is under 750 pixels wide */
+    aside {
+        border: 3px dashed gray;
+    }
+}
+
+.float-columns > div {
+    float: left;
+    width: 33%;
+}
+
+@media (max-width: 490px) {
+    /* applies when the screen is under 490 pixels wide */
+    /* Reset the columns to render with the flow of the page */
+    aside {
+        border: 2px dotted gray;
+    }
+
+    .float-columns > div {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+.flex-columns {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 490px) {
+    .flex-columns {
+        flex-direction: column;
+    }
 }

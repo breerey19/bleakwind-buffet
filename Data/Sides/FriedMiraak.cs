@@ -18,10 +18,18 @@ namespace BleakwindBuffet.Data.Sides
         private Size size = Size.Small;
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// name of item without size
+        /// </summary>
         public override string Name => "Fried Miraak";
 
         /// <summary>
-        /// 
+        /// Description of the menu item
+        /// </summary>
+        public override string Description => "Perfectly prepared hash brown pancakes.";
+
+        /// <summary>
+        /// returns size of side
         /// </summary>
         public override Size Size
         {
